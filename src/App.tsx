@@ -1,25 +1,30 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import InnerApp from './innerApp'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { StyledEngineProvider } from "@mui/material/styles";
+// import { Route, Router, Routes } from 'react-router-dom';
+import { Box } from '@mui/material';
 function App() {
+  const renderRoute = () =>{
+    return(
+      <>
+      <Routes>
+<Route path='/*' element={<InnerApp/>}/>
+
+      </Routes>
+      </>
+    )
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<>
+<StyledEngineProvider injectFirst>
+        <Box className="page_wrapper">
+          <Router>{renderRoute()}</Router>
+        </Box>
+      </StyledEngineProvider>
+</>
   );
 }
 

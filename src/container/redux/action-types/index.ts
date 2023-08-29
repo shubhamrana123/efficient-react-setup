@@ -1,0 +1,9 @@
+export const IS_ERROR = "IS_ERROR";
+export const ERROR_MESSAGE = "ERROR_MESSAGE";
+export const START_LOADING = "START_LOADING";
+export const STOP_LOADING = "STOP_LOADING";
+export const LOADING = "LOADING";
+export const USER_DETAILS = "USER_DETAILS";
+export const AWS_INFO = "AWS_INFO"
+export const LOG_OUT = "LOG_OUT";
+export const LOG_IN = "LOG_IN";
